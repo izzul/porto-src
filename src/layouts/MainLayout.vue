@@ -19,7 +19,7 @@
           class="text-black text-weight-bold cursor-pointer"
           @click="$router.push('/')"
         >
-          Afif Izzul Falakh
+          <span class="bg-white q-px-xs">{{ MyName }}</span>
         </q-toolbar-title>
         
         <q-btn
@@ -49,7 +49,7 @@
         <q-item-label
           header
         >
-          <h6 class="q-my-sm text-dark text-weight-bold">Afif Izzul Falakh</h6>
+          <h6 class="q-my-sm text-dark text-weight-bold" @click="$router.push('/')">{{ MyName }}</h6>
         </q-item-label>
 
         <EssentialLink
@@ -83,6 +83,8 @@ const linksList = [
     target: '_blank'
   }
 ]
+
+const MyName = process.env.MyName
 
 const leftDrawerOpen = ref(false)
 

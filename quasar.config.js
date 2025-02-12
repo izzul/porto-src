@@ -52,7 +52,9 @@ export default defineConfig((ctx) => {
 
       // publicPath: '/',
       // analyze: true,
-      // env: {},
+      env: {
+        MyName: 'Afif Izzul Falakh'
+      },
       // rawDefine: {}
       // ignorePublicFolder: true,
       // minify: false,
@@ -112,7 +114,14 @@ export default defineConfig((ctx) => {
 
     // animations: 'all', // --- includes all animations
     // https://v2.quasar.dev/options/animations
-    animations: [],
+    animations: [
+      'slideInDown',
+      'slideOutDown',
+      'slideInUp',
+      'slideOutUp',
+      'fadeIn',
+      'fadeOut'
+    ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#sourcefiles
     // sourceFiles: {
