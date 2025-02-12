@@ -16,7 +16,8 @@
         />
         
         <q-toolbar-title
-          class="text-black text-weight-bold"
+          class="text-black text-weight-bold cursor-pointer"
+          @click="$router.push('/')"
         >
           Afif Izzul Falakh
         </q-toolbar-title>
@@ -25,8 +26,10 @@
           no-caps
           ripple=false
           flat
-          class="text-black gt-sm"
+          class="text-black gt-sm bg-white"
           label="About Me"
+          to="/about"
+          target="_self"
           />
           
         <q-btn
@@ -71,12 +74,13 @@ const linksList = [
   {
     title: 'About Me',
     icon: 'info',
-    link: 'https://quasar.dev'
+    link: '/about',
   },
   {
     title: 'Let\'s Connect',
     icon: 'mail',
-    link: 'https://linkedin.com/in/afif-if'
+    link: 'https://linkedin.com/in/afif-if',
+    target: '_blank'
   }
 ]
 

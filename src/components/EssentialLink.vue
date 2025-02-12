@@ -1,13 +1,13 @@
 <template>
-  <q-item
-    clickable
-    tag="a"
-    target="_blank"
-    :href="props.link"
-  >
-    <q-item-section>
-      <q-item-label lines="1" class="left-border-sm q-pl-sm">{{ props.title }}</q-item-label>
-    </q-item-section>
+  <q-item>
+    <q-btn
+      unelevated
+      dense
+      flat
+      :target="props.target"
+      :to="props.link"
+      :label="props.title"
+    />
   </q-item>
 </template>
 
@@ -26,6 +26,11 @@ const props = defineProps({
   icon: {
     type: String,
     default: ''
+  },
+
+  target: {
+    type: String,
+    default: '_self'
   }
 })
 </script>
